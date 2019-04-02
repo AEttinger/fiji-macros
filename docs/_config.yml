@@ -1,0 +1,11 @@
+description: "My exploration of tools for image processing and analysis."
+collections:
+- notebooks
+- r
+- fiji
+notebooks:
+  output: true
+r:
+  output: true
+fiji:
+  output: true
