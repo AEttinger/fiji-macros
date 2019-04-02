@@ -1,6 +1,6 @@
 ---
-title: "Bioimaging playground"
-description: "A (more or less) random collection of scripts and macros."
+title: "Fiji macros"
+description: "Collection of some Fiji macros."
 ---
 <main role="main" class="container">
   <div class="row">
@@ -13,24 +13,10 @@ description: "A (more or less) random collection of scripts and macros."
     <div class="sidebar-module">
       <h4>Jupyter Notebooks</h4>
       <ol class="list-unstyled">
-        {% for notebook in site.notebooks %}
-          <li><a href="{{ notebook.url | prepend: repository.name | prepend: site.url }}" target="code_frame">{{ notebook.title | capitalize }}</a></li>
-        {% endfor %}
-      </ol>
-    </div>
-    <div class="sidebar-module">
-      <h4>Fiji</h4>
-      <ol class="list-unstyled">
-        {% for f in site.fiji %}
-          <li><a href="{{ f.url | prepend: repository.name | prepend: site.url }}" target="code_frame">{{ f.title | capitalize }}</a></li>
-        {% endfor %}
-      </ol>
-    </div>
-    <div class="sidebar-module">
-      <h4>R</h4>
-      <ol class="list-unstyled">
-        {% for rscript in site.r %}
-          <li><a href="{{ rscript.url | prepend: repository.name | prepend: site.url }}" target="code_frame">{{ rscript.title | capitalize }}</a></li>
+        {% for file in site.static_files %}
+        {% if file.extname == ".ijm" %}
+          <li><a href="{{ file.path | prepend: repository.name | prepend: site.url }}" target="code_frame">{{ file.basename | capitalize }}</a></li>
+        {% endif %}
         {% endfor %}
       </ol>
     </div>
