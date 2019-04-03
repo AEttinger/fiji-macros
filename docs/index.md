@@ -9,7 +9,7 @@ description: "Collection of some Fiji macros."
       <ol class="list-unstyled">
         {% for file in site.static_files %}
         {% assign extension = file.extname %}
-        {{ file }}
+        {{ file.name }}
         {% if extension == ".ijm" %}
           <li><a href="{{ file.path | prepend: repository.name | prepend: site.url }}" target="code_frame">{{ file.basename | capitalize }}</a></li>
         {% endif %}
