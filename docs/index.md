@@ -6,7 +6,7 @@ description: "Collection of some Fiji macros."
 {% assign extension = file.extname %}
 {{ file.name }}
 {% endfor %}
-
+<!--
 <main role="main" class="container">
   <aside class="col-sm-2 ml-sm-auto blog-sidebar">
     <div class="sidebar-module">
@@ -23,3 +23,4 @@ description: "Collection of some Fiji macros."
     </div>
     </aside>
 </main>
+--!>
