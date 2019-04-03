@@ -2,6 +2,11 @@
 title: "Fiji macros"
 description: "Collection of some Fiji macros."
 ---
+{% for file in site.static_files %}
+{% assign extension = file.extname %}
+{{ file.name }}
+{% endfor %}
+
 <main role="main" class="container">
   <aside class="col-sm-2 ml-sm-auto blog-sidebar">
     <div class="sidebar-module">
