@@ -8,7 +8,8 @@ description: "Collection of some Fiji macros."
       <h4>Macros</h4>
       <ol class="list-unstyled">
         {% for file in site.static_files %}
-        {{ assign extension = file.extname }}
+        {% assign extension = file.extname %}
+        {{ file }}
         {% if extension == ".ijm" %}
           <li><a href="{{ file.path | prepend: repository.name | prepend: site.url }}" target="code_frame">{{ file.basename | capitalize }}</a></li>
         {% endif %}
@@ -16,5 +17,4 @@ description: "Collection of some Fiji macros."
       </ol>
     </div>
     </aside>
-  </div>
 </main>
